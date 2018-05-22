@@ -9,7 +9,7 @@ namespace App\Helpers;
 class EasyuiPagination
 {
 
-    public static function paginageData($request, $query, $customSize = 20)
+    public static function paginageData($request, $query, $customSize = 10)
     {
 
         $page = ($request->has('page')) ? $request->page :1;

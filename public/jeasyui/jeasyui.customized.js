@@ -34,7 +34,7 @@ $.extend($.fn.combobox.defaults.inputEvents, {
 });
 
 $.fn.datagrid.defaults = $.extend({}, $.fn.datagrid.defaults, {
-  pageSize: 20,
+  pageSize: 10,
     pageList: [10,15,20,25,30,40,50]
 
 });

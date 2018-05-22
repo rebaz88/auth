@@ -46,6 +46,8 @@
     rownumbers:true,
     pagination:true,
     border:false,
+    remoteFilter:true,
+    filterTypeMatch:'any',
     url:'codes/list'
   })
 

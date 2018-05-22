@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Codes\StoreCode;
 use App\Http\Requests\Codes\UpdateCode;
 
+use App\Helpers\QueryFilter;
 use App\Helpers\EasyuiPagination;
 
 class CodeController extends Controller
@@ -34,14 +35,7 @@ class CodeController extends Controller
     {
       $query = Code::select('id', 'name', 'category');
 
-      if($request->has('filterRules')) {
-
-        $filterRules = json_decode($request->filterRules);
-
-        foreach ($filterRules as $filterRule) {
-          $query->where($filterRule->field, 'like', '%'. $filterRule->value .'%');
-        }
-      }
+      $query = QueryFilter::filter($query, $request);
 
     	return EasyuiPagination::paginageData($request, $query);
     }
