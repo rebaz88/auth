@@ -48,9 +48,9 @@
         <div data-options="region:'center', border:false" style="padding:0px;">
 
           <div class="fitem">
-              <div id="summernote"></div>
+            <div id="editor">
+            </div>
           </div>
-          {{-- <div id="description" fit="true"></div> --}}
 
         </div>
 
@@ -70,20 +70,8 @@
 
   $(function(){
 
-    $('#summernote').summernote({
-          // dialogsInBody: true,
-          height: 400,
-          width: '100%',
-          disableResizeImage: true,
+    initializeEditor();
 
-          callbacks: {
-              onImageUpload: function(image) {
-                  saveEditorImage(image[0]);
-              }
-          }
-      });
   });
 
 </script>
-
-

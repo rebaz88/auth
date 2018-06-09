@@ -11,22 +11,23 @@
 
     <!-- Scripts -->
     <!-- include libraries(jQuery, bootstrap) -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    {{-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"> --}}
+    {{-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> --}}
+    {{-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> --}}
 
     <!-- include summernote css/js -->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+    {{-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet"> --}}
+    {{-- <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script> --}}
 
-    {{-- <script type="text/javascript" src="{{asset('jeasyui/jquery.min.js')}}"></script> --}}
+    <script type="text/javascript" src="{{asset('jeasyui/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('jeasyui/jquery.easyui.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('jeasyui/jquery.edatagrid.js')}}"></script>
     <script type="text/javascript" src="{{asset('jeasyui/datagrid-filter.js')}}"></script>
     <script type="text/javascript" src="{{asset('jeasyui/jeasyui-texteditor/texteditor.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/lodash.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('jeasyui/jeasyui.customized.js')}}"></script>
-
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{asset('jeasyui/themes/default/easyui.css')}}">
@@ -37,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/dock.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/application.custom.css')}}">
 
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
 

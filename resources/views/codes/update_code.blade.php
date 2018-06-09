@@ -60,7 +60,7 @@
 
 
           <div class="fitem">
-              <div id="summernote"></div>
+            <div id="editor"></div>
           </div>
 
         </div>
@@ -83,18 +83,9 @@
 
       var description = {!! json_encode($code->description) !!};
 
-      $('#summernote').summernote({
-          // dialogsInBody: true,
-          height: 400,
-          width: '100%',
-          disableResizeImage: true,
+      initializeEditor();
 
-          callbacks: {
-              onImageUpload: function(image) {
-                  saveEditorImage(image[0]);
-              }
-          }
-      }).summernote('code',description);
+      window.quill.root.innerHTML = description;
 
       $('#CodeForm').form('load', {
         category: '{!! $code->category !!}',
@@ -118,5 +109,3 @@
   }
 
 </script>
-
-

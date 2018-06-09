@@ -84,7 +84,8 @@
 
         onSubmit: function(param) {
           param._token = window.CSRF_TOKEN;
-          param.description = $('#summernote').summernote('code');
+          // param.description = $('#summernote').summernote('code');
+          param.description = window.quill.root.innerHTML;
 
 
           var formValidated = $(this).form('validate');
@@ -167,7 +168,36 @@
       });
   }
 
+  function initializeEditor() {
+
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+
+        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        [{ 'font': [] }],
+        [{ 'align': 'right' }],
+
+        ['clean']                                         // remove formatting button
+      ];
+
+    window.quill = new Quill('#editor', {
+      modules: {
+        toolbar: toolbarOptions
+      },
+      theme: 'snow',
+      align: 'right',
+    })
+    window.quill.format('direction', 'rtl');
+    window.quill.format('align', 'right');
+  }
+
 
 </script>
-
-

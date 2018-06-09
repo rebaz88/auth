@@ -33,7 +33,7 @@ class CodeController extends Controller
 
     public function list(Request $request)
     {
-      $query = Code::select('id', 'name', 'category');
+      $query = Code::select('id', 'name', 'category')->orderBy('id', 'desc');
 
       $query = QueryFilter::filter($query, $request);
 
